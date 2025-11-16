@@ -12,6 +12,7 @@ Características:
 import argparse
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -22,6 +23,9 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 from sklearn.metrics import precision_recall_curve, average_precision_score
 import matplotlib.pyplot as plt
+
+# Agregar src al path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 from model import AlphabetNet
 from metrics import evaluate_metrics, compute_ap_per_symbol

@@ -10,11 +10,15 @@ Características:
 import argparse
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Optional, Dict
 
 import torch
 import torch.nn as nn
+
+# Agregar src al path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 from model import AlphabetNet
 from train import ALPHABET, MAX_PREFIX_LEN

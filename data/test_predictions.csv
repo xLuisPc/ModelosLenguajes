@@ -1,0 +1,11 @@
+regex,alfabeto_predicho,alfabeto_real
+[LCIG]+,"G, I","C, G, I, L"
+[GDIK]*,"I, K","D, G, I, K"
+[JCDLB]*,B,"B, C, D, J, L"
+H+C*J+BF|DL*,L,"B, C, D, F, H, J, L"
+I+B*|AA*,A,"A, B, I"
+B*|K+JC+K+,K,"B, C, J, K"
+[CAFBD],D,"A, B, C, D, F"
+[FDJ]+,"D, F, J","D, F, J"
+D*ED+G+C+A+|I+L*L*|I+,I,"A, C, D, E, G, I, L"
+K*H+F*H+I+K+F|C,C,"C, F, H, I, K"

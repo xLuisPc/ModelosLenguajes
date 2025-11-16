@@ -498,9 +498,9 @@ def main():
             optimizer,
             mode='min',
             factor=0.5,
-            patience=3,
-            verbose=True
+            patience=3
         )
+        logger.info("✓ ReduceLROnPlateau scheduler activado")
     
     # Early stopping
     early_stopping = EarlyStopping(

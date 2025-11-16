@@ -11,6 +11,7 @@ Características:
 import argparse
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Dict, Tuple, Optional
 
@@ -20,6 +21,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from sklearn.metrics import precision_recall_curve, f1_score, precision_score, recall_score
+
+# Agregar src al path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 from model import AlphabetNet
 from train import AlphabetDataset, collate_fn, ALPHABET, MAX_PREFIX_LEN, regex_to_indices

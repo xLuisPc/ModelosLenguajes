@@ -15,6 +15,7 @@ Métricas comparadas:
 import argparse
 import json
 import logging
+import sys
 import time
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
@@ -24,6 +25,9 @@ import pandas as pd
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
+
+# Agregar src al path
+sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 
 from model import AlphabetNet
 from metrics import evaluate_metrics
