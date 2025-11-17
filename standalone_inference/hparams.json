@@ -1,0 +1,43 @@
+{
+  "model": {
+    "vocab_size": 14,
+    "alphabet_size": 12,
+    "emb_dim": 96,
+    "hidden_dim": 192,
+    "rnn_type": "GRU",
+    "num_layers": 1,
+    "dropout": 0.2,
+    "padding_idx": 0,
+    "use_automata_conditioning": false,
+    "automata_emb_dim": 16
+  },
+  "training": {
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-4,
+    "num_epochs": 50,
+    "early_stopping_patience": 8,
+    "gradient_clip": 1.0
+  },
+  "data": {
+    "max_prefix_len": 64,
+    "alphabet": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"],
+    "special_tokens": {
+      "PAD": 0,
+      "<EPS>": 1
+    }
+  },
+  "seeds": {
+    "random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "cuda_seed": 42
+  },
+  "paths": {
+    "train_data": "data/alphabet/train_wide.parquet",
+    "val_data": "data/alphabet/val_wide.parquet",
+    "test_data": "data/alphabet/test_wide.parquet",
+    "output_dir": "checkpoints"
+  }
+}
+
